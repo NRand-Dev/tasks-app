@@ -1,6 +1,3 @@
-from operator import truediv
-
-
 class Task:
 # Basic Data container for Task Objects
 
@@ -12,13 +9,18 @@ description: str = ""
 completed: bool = False
 
 
+### DO I NEED THIS INITALIZER???
+def __init__(self):
+    self.title = title
+    self.description = description
+    self.completed = completed
+
 
 def _set_title(text: str):
     if text:
         title = text
     else:
         print('ERROR: No text passed to _set_title function')
-
 
 
 def toggle_completed():
